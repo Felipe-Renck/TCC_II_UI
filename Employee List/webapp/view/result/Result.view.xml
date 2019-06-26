@@ -1,0 +1,15 @@
+<View controllerName="sap.ui.demo.nav.controller.result.Result" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+	<Page id="employeeListPage" title="{i18n>result}" showNavButton="false" navButtonPress=".onNavBack" class="sapUiResponsiveContentPadding">
+		<content>
+			<List id="employeeList" headerText="{i18n>candidates}" items="{/Employees}">
+				<items>
+					<ObjectListItem title="{FirstName} {LastName}" description="{PoliticalParty}" iconDensityAware="false" icon="{ProfilePicture}" iconInset="false" type="Active" number="{Percentage} %" press=".onListItemPressed">
+						<attributes>
+							<ObjectAttribute text="Votos: {Votes}" />
+						</attributes>
+					</ObjectListItem>
+				</items>
+			</List>
+		</content>
+	</Page>
+</View>
